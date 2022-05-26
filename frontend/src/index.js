@@ -1,7 +1,11 @@
+
 import React from 'react';
+import 'antd/dist/antd.min.css'
+import 'antd/dist/antd.less';
 import ReactDOM from 'react-dom';
-// import './index.css';
+import './index.css';
 import App from './App';
+// eslint-disable-next-line
 import autoprefixer from 'autoprefixer'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';

@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
+import 'antd/dist/antd.less';
+import 'antd/dist/antd.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
 import Bisection from './components/RootofEquations/bisection';

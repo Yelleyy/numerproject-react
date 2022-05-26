@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Desmos from 'desmos';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css'
 import { Button, Table } from "antd";
 import { create, all } from 'mathjs'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
-import {DownloadOutlined} from '@ant-design/icons';
+import { DownloadOutlined } from '@ant-design/icons';
 const config = {}
 const math = create(all, config)
 
