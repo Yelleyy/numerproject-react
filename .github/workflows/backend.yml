@@ -19,10 +19,6 @@ jobs:
         working-directory: ./backend
         run : npm install
 
-      - name: npm test
-        working-directory: ./backend
-        run : npm test
-
       - name: Deploy to AWS
         uses: jakejarvis/s3-sync-action@master
         with:
