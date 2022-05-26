@@ -3,8 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
 import Bisection from './components/RootofEquations/bisection';
-import { Route, Routes
- } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import MainNavbar from './components/tools/navbar';
 import Onepoint from './components/RootofEquations/onepoint';
 import Falseposition from './components/RootofEquations/falseposition';
@@ -18,6 +17,7 @@ function App() {
       <div>
           <MainNavbar /> 
          <Routes>
+           
           <Route path='/bisection' element={<Bisection />} />
           <Route path='/onepoint' element={<Onepoint />} />
           <Route path='/falseposition' element={<Falseposition />} />
