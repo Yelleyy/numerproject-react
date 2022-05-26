@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Desmos from 'desmos';
 import { Button, Table } from "antd";
 import { create, all } from 'mathjs'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
@@ -191,16 +190,7 @@ const Bisection = () => {
         if (check.show) {
             const graph = document.getElementById('mygraph')
             graph.innerHTML = ''
-            const calculator = Desmos.GraphingCalculator(graph)
-            const x = result.toString()
-            if(check.api){
-                calculator.setExpression({ id: 'graph1', latex: 'f(x) = ' + resultfx.toString() })
-                calculator.setExpression({ id: 'graph2', latex: 'x = (' + x + ',' + 0 + ')' })
-            }
-            else{
-                calculator.setExpression({ id: 'graph1', latex: 'f(x) = ' + data.Fx })
-                calculator.setExpression({ id: 'graph2', latex: 'x = (' + x + ',' + 0 + ')' })
-            }
+      
         }
 
         document.getElementById('fxinput').setOptions({
