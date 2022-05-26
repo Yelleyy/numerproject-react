@@ -1,0 +1,36 @@
+name: Production workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: npm install
+        working-directory: ./frontend
+        run : npm install
+
+      - name: npm run build
+        working-directory: ./frontend
+        run : npm run build
+
+      - name: npm test
+        working-directory: ./frontend
+        run : npm test
+
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          args: deploy --dir=build --prod
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: 'numerproject-react'
+          heroku_email: 'maxyelploy@gmail.com'
