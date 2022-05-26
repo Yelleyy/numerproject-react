@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
 import Bisection from './components/RootofEquations/bisection';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch,BrowserRouter as Router} from 'react-router-dom';
 import MainNavbar from './components/tools/navbar';
 import Onepoint from './components/RootofEquations/onepoint';
 import Falseposition from './components/RootofEquations/falseposition';
@@ -13,22 +13,23 @@ import Cramer from './components/Linear Equations/cramer';
 function App() {
   return (
    
-      <div>
-          <MainNavbar /> 
+          <Router>
+  
+          <MainNavbar/>
          <Switch>
-          <Route path='/bisection' element={<Bisection />} />
-          <Route path='/onepoint' element={<Onepoint />} />
-          <Route path='/falseposition' element={<Falseposition />} />
-          <Route path='/secant' element={<Secant />} />
-          <Route path='/newton' element={<Newton />} />
-          <Route path='/cramer' element={<Cramer />} />
+          <Route path='/bisection' component={Bisection}/>
+          <Route path='/onepoint' component={Onepoint}/>
+          <Route path='/falseposition' component={Falseposition}/>
+          <Route path='/secant' component={Secant}/>
+          <Route path='/newton' component={Newton}/>
+          <Route path='/cramer' component={Cramer}/>
         </Switch> 
         <div className="container">
         <br></br>
         <h1>6204062620062 Pattarapol Pornsirirung</h1>
         </div>
-      </div>
- 
+   
+      </Router>
   );
 }
 
