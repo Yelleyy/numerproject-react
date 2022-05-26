@@ -6,15 +6,15 @@ on:
       - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
+        uses: actions/checkout@v1
+
       - name: npm install
         working-directory: ./frontend
         run : npm install
