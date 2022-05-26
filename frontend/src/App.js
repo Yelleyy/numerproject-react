@@ -16,7 +16,7 @@ function App() {
    
  
       <div>
-          <MainNavbar /> 
+          <MainNavbar/> 
          <Routes>
           <Route path='/bisection' element={<Bisection />} />
           <Route path='/onepoint' element={<Onepoint />} />
