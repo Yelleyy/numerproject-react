@@ -1,0 +1,104 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    font-family: 'Itim', cursive;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+li a.dropdown-item:active {
+    background-color: rgb(228, 84, 84);
+}
+
+li a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container ul {
+    padding-left: 0;
+}
+
+nav {
+    font-weight: bold;
+}
+
+.bg-nav {
+    background-color: rgba(255, 202, 133, 0.726);
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+math-field:focus-within {
+    outline: 4px solid #1e8000;
+    border-radius: 4px;
+    background: rgba(177, 240, 165, 0.1);
+}
+
+math-field {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 8px rgba(1, 0, 1, .3);
+}
