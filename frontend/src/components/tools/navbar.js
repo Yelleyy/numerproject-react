@@ -7,7 +7,6 @@ import { HomeOutlined, AppstoreOutlined, LineChartOutlined, DownCircleTwoTone } 
 function navbar() {
 
     const [theme, setTheme] = React.useState('dark');
-    const [current, setCurrent] = React.useState('1');
     const changeTheme = (value) => {
         setTheme(value ? 'dark' : 'light');
     };
