@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Desmos from 'desmos';
-import 'antd/dist/antd.css';
 import { Button, Table } from "antd";
 import { create, all } from 'mathjs'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
-import {DownloadOutlined} from '@ant-design/icons';
+// import { DownloadOutlined } from '@ant-design/icons';
 const config = {}
 const math = create(all, config)
 
@@ -192,16 +190,7 @@ const Bisection = () => {
         if (check.show) {
             const graph = document.getElementById('mygraph')
             graph.innerHTML = ''
-            const calculator = Desmos.GraphingCalculator(graph)
-            const x = result.toString()
-            if(check.api){
-                calculator.setExpression({ id: 'graph1', latex: 'f(x) = ' + resultfx.toString() })
-                calculator.setExpression({ id: 'graph2', latex: 'x = (' + x + ',' + 0 + ')' })
-            }
-            else{
-                calculator.setExpression({ id: 'graph1', latex: 'f(x) = ' + data.Fx })
-                calculator.setExpression({ id: 'graph2', latex: 'x = (' + x + ',' + 0 + ')' })
-            }
+      
         }
 
         document.getElementById('fxinput').setOptions({
@@ -229,7 +218,7 @@ const Bisection = () => {
                             <input className="form-control" id="InputXr" placeholder="xR" required />
                         </div>
                         <Button type="primary" onClick={handleSubmit} className="ml-2 mb-2">ยืนยัน</Button>
-                        <Button type="primary" onClick={callapi} className="ml-2 mb-2" icon={<DownloadOutlined />}>API</Button>
+                        <Button type="primary" onClick={callapi} className="ml-2 mb-2" >API</Button>
                     
                         
                         <h4 className="mb-3">ผลลัพธ์ : {result}</h4>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Desmos from 'desmos';
 
 import { create, all } from 'mathjs'
 
@@ -95,16 +94,7 @@ const Falseposition = () => {
         if (check.check) {
             const graph = document.getElementById('mygraph')
             graph.innerHTML = ''
-            const calculator = Desmos.GraphingCalculator(graph)
-            const x = result.toString()
-            calculator.setExpression({ id: 'graph1', latex: 'f(x) = ' + data.Fx })
-            
-            if(x==="Infinity"){
-                calculator.setExpression({ id: 'graph2', latex: 'y = Infinity'})
-            }
-            else{
-                calculator.setExpression({ id: 'graph2', latex: 'y = (' + x +',' + 0 + ')'})
-            }
+  
         }
 
         document.getElementById('fxinput').setOptions({
