@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import 'antd/dist/antd.less';
-import 'antd/dist/antd.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
 import Bisection from './components/RootofEquations/bisection';
@@ -15,7 +13,6 @@ import Cramer from './components/Linear Equations/cramer';
 function App() {
   return (
    
- 
       <div>
           <MainNavbar /> 
          <Routes>

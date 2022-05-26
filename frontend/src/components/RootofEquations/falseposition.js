@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Desmos from 'desmos';
-
 import { create, all } from 'mathjs'
 
 const config = {}
